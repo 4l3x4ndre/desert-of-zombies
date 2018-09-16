@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Desert of Zombies</title>
+    <style media="screen">
+      body {
+        background: #b99322;
+      }
+      #playground {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        overflow: hidden;
+        background-image: url("./Images/road.png");
+      }
+      #player {
+        position: absolute;
+        z-index: 2000;
+      }
+      .zombie {
+        position: absolute;
+        width: 20px;
+        height: 38px;
+      }
+      .bullet {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+      }
+      .power {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+      }
+      #life {
+        left: 10px;
+        position: absolute;
+        font-size: 18px;
+        color: red;
+        font-weight: bold;
+      }
+      #score {
+        left: 370px;
+        top: 16px;
+        position: absolute;
+        font-size: 18px;
+        color: blue;
+        font-weight: bold;
+      }
+      #panelOver {
+        display: none;
+        text-align: center;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+        font-size: 25px;
+        color: #993300;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Desert of Zombies</h1>
+    <center>
+      <div id="playground">
+        <p><span id="life"></span><span id="panelOver">Game Over <br> Press Enter</span><span id="score"></span></p>
+        <p id="life"></p>
+        <p id="score"></p>
+          <img id="player" src="./Images/player.png"></img>
+      </div>
+    </center>
+    <!--div id="zombie"></div-->
+  </body>
+  <script src="./jquery.js"></script>
+  <script src="./player.js"></script>
+  <script src="./sound.js"></script>
+  <script src="./zombieHole.js"></script>
+  <script src="./powerUp.js"></script>
+  <script src="./gun.js"></script>
+  <script src="./zombie.js"></script>
+  <script src="./manager.js"></script>
+</html>
